@@ -423,8 +423,13 @@ def mark_practice_done():
     flash(f"Updated {count} questions as practiced.", 'success')
     return redirect(url_for('dashboard'))
 
+# if __name__ == '__main__':
+#     with app.app_context():
+#         db.create_all()
+#         seed_questions()
+#     app.run(debug=True, host='0.0.0.0')
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
         seed_questions()
-    app.run(debug=True, host='0.0.0.0')
+    app.run()
